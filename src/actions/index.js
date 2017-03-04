@@ -26,7 +26,6 @@ export function getAlbums() {
 
 
 export function getAlbum(id) {
-    //const response = axios.get('http://www.mikebodilyillustration.com/mbi/api/Albums/' + id , myInitGet)
     const response = axios.get(`${BASE_URL}/Albums/${id}`, myInitGet)
 
     return {
@@ -50,7 +49,6 @@ export function createAlbum(props) {
             }
         };
         
-    //const response = axios.post('http://www.mikebodilyillustration.com/mbi/api/Albums', props, myInitPost)
     const response = axios.post(`${BASE_URL}/Albums`, props, myInitPost)
 
     return {
@@ -74,7 +72,7 @@ export function deleteAlbum(id) {
             }
         };
         
-    //const response = axios.post('http://www.mikebodilyillustration.com/mbi/api/Album/Delete/' + id, myInitDelete)
+ 
     const response = axios.post(`${BASE_URL}/Album/Delete/${id}`, myInitDelete)
     return {
         type: "DELETE_ALBUM",
@@ -82,4 +80,4 @@ export function deleteAlbum(id) {
     }
 }
 
-// http://localhost:58034/api/Albums
+ 
